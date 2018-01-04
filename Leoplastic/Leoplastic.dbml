@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="leoplastic" Class="LeoplasticDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\leoplastic.mdf&quot;;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Leoplastic.Properties.Settings" SettingsPropertyName="leoplasticConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.producao" Member="producao">
+    <Type Name="producao">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="processo" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="equipamento" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="data_apontamento" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="produto" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="peso" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="inicio_operacao" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="termino_operacao" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="ordem" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

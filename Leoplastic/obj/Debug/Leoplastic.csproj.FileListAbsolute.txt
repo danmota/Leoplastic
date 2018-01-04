@@ -1,0 +1,52 @@
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe.config
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\bin\Debug\Leoplastic.pdb
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Form1.resources
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Properties.Resources.resources
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.GenerateResource.Cache
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.CoreCompileInputs.cache
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.exe
+C:\Users\guilherme.fernandes\source\repos\Leoplastic\Leoplastic\obj\Debug\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe.config
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Form1.resources
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Properties.Resources.resources
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.GenerateResource.Cache
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.exe
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.pdb
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe.config
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.pdb
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Form1.resources
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Properties.Resources.resources
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.GenerateResource.Cache
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.CoreCompileInputs.cache
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.exe
+C:\Users\R210.R210-07\Desktop\João Paulo\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe.config
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.exe
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\bin\Debug\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Form1.resources
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.Properties.Resources.resources
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.GenerateResource.Cache
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.exe
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\Leoplastic\Leoplastic\obj\Debug\Leoplastic.csproj.ResolveComReference.cache
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\bin\Debug\Leoplastic.exe.config
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\bin\Debug\Leoplastic.exe
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\bin\Debug\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.csproj.ResolveComReference.cache
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.Form1.resources
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.Properties.Resources.resources
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.csproj.GenerateResource.Cache
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.exe
+C:\Users\Daniel Mota\Documents\GitHub\teste\Leoplastic\obj\Debug\Leoplastic.pdb
