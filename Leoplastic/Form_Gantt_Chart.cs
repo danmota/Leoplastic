@@ -15,6 +15,7 @@ namespace Leoplastic
         public Form_Gantt_Chart()
         {
             //InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
 
 
 

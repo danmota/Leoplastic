@@ -23,12 +23,17 @@ namespace Leoplastic
         private string _peso;
         private string _inicio_operacao;
         private string _termino_operacao;
+        private string _ordem;
+        private string _operador;
+        private string _densidade1;
+        private string _densidade2;
 
         LeoplasticDataContext db = new LeoplasticDataContext();
 
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void lbl_inicio_Click(object sender, EventArgs e)
@@ -66,6 +71,7 @@ namespace Leoplastic
                 if (this.Controls[ix] is DataGridView) this.Controls[ix].Dispose();
             }
 
+            btn_export_Excel.Visible = false;
             panel3.Show();
             
     }
@@ -106,6 +112,11 @@ namespace Leoplastic
             _peso = txt_peso.Text;
             _inicio_operacao = txt_inicio.Text;
             _termino_operacao = txt_termino.Text;
+            _ordem = cbx_ordem.Text;
+            _operador = cbx_operador.Text;
+            _densidade1 = txt_densidade1.Text;
+            _densidade2 = txt_densidade2.Text;
+            String _densidade = _densidade1.ToString() + " x " + _densidade2.ToString();
 
 
             try
@@ -113,7 +124,7 @@ namespace Leoplastic
                 producao pro = new producao();
                 if (_processo != null && _equipamento != null && _data_apontamento != null && _produto != null && _peso != null && _inicio_operacao != null && _termino_operacao != null)
                 {
-                    pro.id = 1;
+                    //pro.id = 1;
                     pro.processo = _processo;
                     pro.equipamento = _equipamento;
                     pro.data_apontamento = _data_apontamento;
@@ -121,10 +132,23 @@ namespace Leoplastic
                     pro.peso = _peso;
                     pro.inicio_operacao = _inicio_operacao;
                     pro.termino_operacao = _termino_operacao;
+                    pro.ordem = _ordem;
+                    pro.operador = _operador;
+                    pro.densidade = _densidade;
 
                     db.producao.InsertOnSubmit(pro);
                     db.SubmitChanges();
                     MessageBox.Show("Informação cadastrada com sucesso!");
+
+                    txt_produto.Text = "";
+                    txt_peso.Text = "";
+                    txt_inicio.Text = "";
+                    txt_termino.Text = "";
+                    cbx_ordem.Text = "";
+                    cbx_operador.Text = "";
+                    txt_densidade1.Text = "";
+                    txt_densidade2.Text = "";
+
                 }
                 else
                 {
@@ -146,7 +170,15 @@ namespace Leoplastic
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             //BindDataGridView();
+            LeoplasticDataContext db = new LeoplasticDataContext();
+            BindingSource b = new BindingSource();
+            b.DataSource = from eq in db.producao
+                               //where eq.fecha_dia == st
+                           select eq.ordem;
+            //cbx_operador.DataSource = b;
+            cbx_ordem.DataSource = b;
         }
 
         private void BindDataGridView()
@@ -168,10 +200,11 @@ namespace Leoplastic
                 if (this.Controls[ix] is DataGridView) this.Controls[ix].Dispose();
             }
             panel3.Hide();
+            btn_export_Excel.Visible = true;
             DataGridView dgv = new DataGridView();
 
-            int x_loc = 295;
-            int y_loc = 140;
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
 
             dgv.Location = new System.Drawing.Point(x_loc, y_loc);
             dgv.Name = "DataGridView1";
@@ -179,9 +212,12 @@ namespace Leoplastic
             dgv.Size = new System.Drawing.Size(1366, 856);
             dgv.ForeColor = System.Drawing.Color.Black;
             Controls.Add(dgv);
-        
 
-        
+            dgv.AutoResizeColumns();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
+
 
             LeoplasticDataContext db = new LeoplasticDataContext();
             BindingSource b = new BindingSource();
@@ -201,8 +237,8 @@ namespace Leoplastic
             panel3.Hide();
             DataGridView dgv = new DataGridView();
 
-            int x_loc = 295;
-            int y_loc = 140;
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
 
             dgv.Location = new System.Drawing.Point(x_loc, y_loc);
             dgv.Name = "DataGridView1";
@@ -211,6 +247,8 @@ namespace Leoplastic
             dgv.ForeColor = System.Drawing.Color.Black;
             Controls.Add(dgv);
 
+            dgv.AutoResizeColumns();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
 
@@ -232,8 +270,8 @@ namespace Leoplastic
             panel3.Hide();
             DataGridView dgv = new DataGridView();
 
-            int x_loc = 295;
-            int y_loc = 140;
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
 
             dgv.Location = new System.Drawing.Point(x_loc, y_loc);
             dgv.Name = "DataGridView1";
@@ -242,7 +280,8 @@ namespace Leoplastic
             dgv.ForeColor = System.Drawing.Color.Black;
             Controls.Add(dgv);
 
-
+            dgv.AutoResizeColumns();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
             LeoplasticDataContext db = new LeoplasticDataContext();
@@ -262,8 +301,8 @@ namespace Leoplastic
             panel3.Hide();
             DataGridView dgv = new DataGridView();
 
-            int x_loc = 295;
-            int y_loc = 140;
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
 
             dgv.Location = new System.Drawing.Point(x_loc, y_loc);
             dgv.Name = "DataGridView1";
@@ -272,7 +311,8 @@ namespace Leoplastic
             dgv.ForeColor = System.Drawing.Color.Black;
             Controls.Add(dgv);
 
-
+            dgv.AutoResizeColumns();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
             LeoplasticDataContext db = new LeoplasticDataContext();
@@ -292,8 +332,8 @@ namespace Leoplastic
             panel3.Hide();
             DataGridView dgv = new DataGridView();
 
-            int x_loc = 295;
-            int y_loc = 140;
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
 
             dgv.Location = new System.Drawing.Point(x_loc, y_loc);
             dgv.Name = "DataGridView1";
@@ -302,7 +342,8 @@ namespace Leoplastic
             dgv.ForeColor = System.Drawing.Color.Black;
             Controls.Add(dgv);
 
-
+            dgv.AutoResizeColumns();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
             LeoplasticDataContext db = new LeoplasticDataContext();
@@ -330,11 +371,17 @@ namespace Leoplastic
 
         private void btn_gantt_Click(object sender, EventArgs e)
         {
+            btn_export_Excel.Visible = false;
+            
+
 
             Form_Gantt_Chart gc = new Form_Gantt_Chart();
             gc.Show();
 
             Graphics g = gc.CreateGraphics();
+
+
+
 
             // Create solid brush.
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
@@ -359,8 +406,8 @@ namespace Leoplastic
             panel3.Hide();
             DataGridView dgv = new DataGridView();
 
-            int x_loc = 295;
-            int y_loc = 140;
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
 
             dgv.Location = new System.Drawing.Point(x_loc, y_loc);
             dgv.Name = "DataGridView1";
@@ -411,9 +458,23 @@ namespace Leoplastic
                 }
             }
             // save the application  
-            workbook.SaveAs("C:\\Users\\Daniel Mota\\Documents\\GitHub\\Leoplastic\\Leoplastic\\Leoplastic\\Leoplastic\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            workbook.SaveAs("C:\\Users\\Daniel Mota\\Documents\\GitHub\\Leoplastic\\Leoplastic\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
             app.Quit();
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+
+            panel1.Width = Form1.ActiveForm.Width;
+            panel2.Height = Form1.ActiveForm.Height;
+            panel3.Width = Form1.ActiveForm.Width;
+            panel3.Height = Form1.ActiveForm.Height;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
