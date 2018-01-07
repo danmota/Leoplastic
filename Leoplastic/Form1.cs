@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
+// Reference for Database http://www.c-sharpcorner.com/article/read-microsoft-access-database-in-C-Sharp/
 
 namespace Leoplastic
 {
@@ -27,6 +32,10 @@ namespace Leoplastic
         private string _operador;
         private string _densidade1;
         private string _densidade2;
+
+        //String connection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Daniel Mota\\Documents\\GitHub\\Leoplastic\\Leoplastic.mdb;Persist Security Info=False";
+        
+        String connection = Properties.Settings.Default.leoplasticConnectionString_access;
 
         LeoplasticDataContext db = new LeoplasticDataContext();
 
@@ -119,44 +128,48 @@ namespace Leoplastic
             String _densidade = _densidade1.ToString() + " x " + _densidade2.ToString();
 
 
+            
             try
             {
-                producao pro = new producao();
                 if (_processo != null && _equipamento != null && _data_apontamento != null && _produto != null && _peso != null && _inicio_operacao != null && _termino_operacao != null)
                 {
-                    //pro.id = 1;
-                    pro.processo = _processo;
-                    pro.equipamento = _equipamento;
-                    pro.data_apontamento = _data_apontamento;
-                    pro.produto = _produto;
-                    pro.peso = _peso;
-                    pro.inicio_operacao = _inicio_operacao;
-                    pro.termino_operacao = _termino_operacao;
-                    pro.ordem = _ordem;
-                    pro.operador = _operador;
-                    pro.densidade = _densidade;
+                    // Add a new row  
+                    String sql = "INSERT INTO producao(processo,equipamento,data_apontamento,produto,peso,inicio_operacao,termino_operacao,ordem,operador,densidade) VALUES ('"+
+                        _processo + "', '" +
+                        _equipamento + "', '" +
+                        _data_apontamento + "', '"+
+                        _produto + "', '" +
+                        _peso + "', '" +
+                        _inicio_operacao + "', '" +
+                        _termino_operacao + "', '" +
+                        _ordem + "', '" +
+                        _operador + "', '" +
+                        _densidade + "')";
+                    using (OleDbConnection conn = new OleDbConnection(connection))
+                    {
+                        conn.Open();
+                        OleDbCommand command = new OleDbCommand(sql, conn);
+                        command = new OleDbCommand(sql, conn);
+                        command.ExecuteReader();
+                    }
+            
+                MessageBox.Show("Informação cadastrada com sucesso!");
 
-                    db.producao.InsertOnSubmit(pro);
-                    db.SubmitChanges();
-                    MessageBox.Show("Informação cadastrada com sucesso!");
-
-                    txt_produto.Text = "";
-                    txt_peso.Text = "";
-                    txt_inicio.Text = "";
-                    txt_termino.Text = "";
-                    cbx_ordem.Text = "";
-                    cbx_operador.Text = "";
-                    txt_densidade1.Text = "";
-                    txt_densidade2.Text = "";
+                txt_produto.Text = "";
+                txt_peso.Text = "";
+                txt_inicio.Text = "";
+                txt_termino.Text = "";
+                cbx_ordem.Text = "";
+                cbx_operador.Text = "";
+                txt_densidade1.Text = "";
+                txt_densidade2.Text = "";
 
                 }
                 else
                 {
                     MessageBox.Show("Informe os valores para inclusão...");
                 }
-                BindDataGridView();
-                //lblmsg.Text = "Registro incluído com sucesso !!";
-                //lblmsg.Visible = true;
+            
             }
             catch (Exception ex)
             {
@@ -171,24 +184,18 @@ namespace Leoplastic
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            //BindDataGridView();
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                               //where eq.fecha_dia == st
-                           select eq.ordem;
-            //cbx_operador.DataSource = b;
-            cbx_ordem.DataSource = b;
         }
 
         private void BindDataGridView()
         {
+            /*
             var getData = from c in db.producao
                           select c;
 
             //dgvClientes.DataSource = getData;
             //dgvClientes.Columns[0].ReadOnly = true;
             //contaLinhas = dgvClientes.RowCount - 1;
+            */
         }
 
 
@@ -216,15 +223,23 @@ namespace Leoplastic
             dgv.AutoResizeColumns();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+            string sql = "SELECT * FROM producao";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
+                
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
 
 
-
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                           //where eq.fecha_dia == st
-                           select eq;
-            dgv.DataSource = b;
+            
 
         }
 
@@ -250,14 +265,20 @@ namespace Leoplastic
             dgv.AutoResizeColumns();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+            string sql = "SELECT * FROM producao WHERE processo='Extrusora' ";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
 
-
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                               where eq.processo == "Extrusora"
-                           select eq;
-            dgv.DataSource = b;
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
 
         }
 
@@ -283,13 +304,20 @@ namespace Leoplastic
             dgv.AutoResizeColumns();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+            string sql = "SELECT * FROM producao WHERE processo='Rebobinadeira' ";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
 
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                           where eq.processo == "Rebobinadeira"
-                           select eq;
-            dgv.DataSource = b;
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
         }
 
         private void btn_corte_Click(object sender, EventArgs e)
@@ -314,13 +342,20 @@ namespace Leoplastic
             dgv.AutoResizeColumns();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+            string sql = "SELECT * FROM producao WHERE processo='Corte' ";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
 
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                           where eq.processo == "Corte"
-                           select eq;
-            dgv.DataSource = b;
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
         }
 
         private void btn_expedicao_Click(object sender, EventArgs e)
@@ -345,13 +380,20 @@ namespace Leoplastic
             dgv.AutoResizeColumns();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+            string sql = "SELECT * FROM producao WHERE processo='Expedição' ";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
 
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                           where eq.processo == "Expedição"
-                           select eq;
-            dgv.DataSource = b;
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -416,14 +458,21 @@ namespace Leoplastic
             dgv.ForeColor = System.Drawing.Color.Black;
             Controls.Add(dgv);
 
+            string sql = "SELECT * FROM producao";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
 
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
 
-
-            LeoplasticDataContext db = new LeoplasticDataContext();
-            BindingSource b = new BindingSource();
-            b.DataSource = from eq in db.producao
-                           select eq;
-            dgv.DataSource = b;
             // creating Excel Application  
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             // creating new WorkBook within Excel application  
@@ -458,7 +507,7 @@ namespace Leoplastic
                 }
             }
             // save the application  
-            workbook.SaveAs("C:\\Users\\Daniel Mota\\Documents\\GitHub\\Leoplastic\\Leoplastic\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            //workbook.SaveAs("C:\\Users\\Daniel Mota\\Documents\\GitHub\\Leoplastic\\Leoplastic\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
             app.Quit();
         }
@@ -466,10 +515,10 @@ namespace Leoplastic
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
 
-            panel1.Width = Form1.ActiveForm.Width;
-            panel2.Height = Form1.ActiveForm.Height;
-            panel3.Width = Form1.ActiveForm.Width;
-            panel3.Height = Form1.ActiveForm.Height;
+            //panel1.Width = Form1.ActiveForm.Width;
+            //panel2.Height = Form1.ActiveForm.Height;
+            //panel3.Width = Form1.ActiveForm.Width;
+            //panel3.Height = Form1.ActiveForm.Height;
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbx_ordem = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbt_expedicao = new System.Windows.Forms.RadioButton();
             this.rbt_corte = new System.Windows.Forms.RadioButton();
@@ -69,12 +71,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_export_Excel = new System.Windows.Forms.Button();
             this.btn_gantt = new System.Windows.Forms.Button();
             this.btn_listagem = new System.Windows.Forms.Button();
             this.btn_extrusora = new System.Windows.Forms.Button();
-            this.btn_export_Excel = new System.Windows.Forms.Button();
-            this.cbx_ordem = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -114,6 +114,24 @@
             this.panel3.Size = new System.Drawing.Size(1191, 1023);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(636, 23);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 25);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Ordem";
+            // 
+            // cbx_ordem
+            // 
+            this.cbx_ordem.FormattingEnabled = true;
+            this.cbx_ordem.Location = new System.Drawing.Point(738, 20);
+            this.cbx_ordem.Name = "cbx_ordem";
+            this.cbx_ordem.Size = new System.Drawing.Size(444, 33);
+            this.cbx_ordem.TabIndex = 22;
             // 
             // groupBox2
             // 
@@ -545,6 +563,18 @@
             this.panel2.Size = new System.Drawing.Size(462, 1227);
             this.panel2.TabIndex = 11;
             // 
+            // btn_export_Excel
+            // 
+            this.btn_export_Excel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_export_Excel.BackgroundImage")));
+            this.btn_export_Excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_export_Excel.Location = new System.Drawing.Point(332, 343);
+            this.btn_export_Excel.Name = "btn_export_Excel";
+            this.btn_export_Excel.Size = new System.Drawing.Size(75, 75);
+            this.btn_export_Excel.TabIndex = 12;
+            this.btn_export_Excel.UseVisualStyleBackColor = true;
+            this.btn_export_Excel.Visible = false;
+            this.btn_export_Excel.Click += new System.EventHandler(this.btn_export_Excel_Click);
+            // 
             // btn_gantt
             // 
             this.btn_gantt.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -580,36 +610,6 @@
             this.btn_extrusora.Text = "Extrusora";
             this.btn_extrusora.UseVisualStyleBackColor = true;
             this.btn_extrusora.Click += new System.EventHandler(this.btn_extrusora_Click);
-            // 
-            // btn_export_Excel
-            // 
-            this.btn_export_Excel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_export_Excel.BackgroundImage")));
-            this.btn_export_Excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_export_Excel.Location = new System.Drawing.Point(332, 343);
-            this.btn_export_Excel.Name = "btn_export_Excel";
-            this.btn_export_Excel.Size = new System.Drawing.Size(75, 75);
-            this.btn_export_Excel.TabIndex = 12;
-            this.btn_export_Excel.UseVisualStyleBackColor = true;
-            this.btn_export_Excel.Visible = false;
-            this.btn_export_Excel.Click += new System.EventHandler(this.btn_export_Excel_Click);
-            // 
-            // cbx_ordem
-            // 
-            this.cbx_ordem.FormattingEnabled = true;
-            this.cbx_ordem.Location = new System.Drawing.Point(738, 20);
-            this.cbx_ordem.Name = "cbx_ordem";
-            this.cbx_ordem.Size = new System.Drawing.Size(444, 33);
-            this.cbx_ordem.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(636, 23);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 25);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Ordem";
             // 
             // Form1
             // 

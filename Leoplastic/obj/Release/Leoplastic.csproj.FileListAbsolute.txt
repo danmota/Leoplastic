@@ -17,3 +17,4 @@ C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplast
 C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csproj.CoreCompileInputs.cache
 C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.exe
 C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.pdb
+C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csprojResolveAssemblyReference.cache
