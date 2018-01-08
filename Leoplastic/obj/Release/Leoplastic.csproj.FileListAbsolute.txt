@@ -18,3 +18,14 @@ C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplast
 C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.exe
 C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.pdb
 C:\Users\Daniel Mota\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\bin\Release\Leoplastic.exe.config
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\bin\Release\Leoplastic.exe
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\bin\Release\Leoplastic.pdb
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csprojResolveAssemblyReference.cache
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csproj.ResolveComReference.cache
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.Form1.resources
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.Properties.Resources.resources
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csproj.GenerateResource.Cache
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.csproj.CoreCompileInputs.cache
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.exe
+C:\Users\R210.R210-07\Documents\GitHub\Leoplastic\Leoplastic\obj\Release\Leoplastic.pdb

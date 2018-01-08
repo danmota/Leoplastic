@@ -515,10 +515,11 @@ namespace Leoplastic
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
 
-            //panel1.Width = Form1.ActiveForm.Width;
-            //panel2.Height = Form1.ActiveForm.Height;
-            //panel3.Width = Form1.ActiveForm.Width;
-            //panel3.Height = Form1.ActiveForm.Height;
+
+            panel1.Width = Form1.ActiveForm.Width;
+            panel2.Height = Form1.ActiveForm.Height;
+            panel3.Width = Form1.ActiveForm.Width;
+            panel3.Height = Form1.ActiveForm.Height;
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
