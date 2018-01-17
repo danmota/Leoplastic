@@ -64,9 +64,6 @@
             this.lbl_inicio = new System.Windows.Forms.Label();
             this.dtp_apontamento = new System.Windows.Forms.DateTimePicker();
             this.lbl_data = new System.Windows.Forms.Label();
-            this.btn_rebobinadeira = new System.Windows.Forms.Button();
-            this.btn_corte = new System.Windows.Forms.Button();
-            this.btn_expedicao = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -75,6 +72,9 @@
             this.btn_gantt = new System.Windows.Forms.Button();
             this.btn_listagem = new System.Windows.Forms.Button();
             this.btn_extrusora = new System.Windows.Forms.Button();
+            this.btn_rebobinadeira = new System.Windows.Forms.Button();
+            this.btn_corte = new System.Windows.Forms.Button();
+            this.btn_expedicao = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,29 +108,28 @@
             this.panel3.Controls.Add(this.lbl_inicio);
             this.panel3.Controls.Add(this.dtp_apontamento);
             this.panel3.Controls.Add(this.lbl_data);
-            this.panel3.Location = new System.Drawing.Point(462, 206);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6);
+            this.panel3.Location = new System.Drawing.Point(231, 107);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1191, 1023);
+            this.panel3.Size = new System.Drawing.Size(596, 532);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(636, 23);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(318, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 25);
+            this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 23;
             this.label7.Text = "Ordem";
             // 
             // cbx_ordem
             // 
             this.cbx_ordem.FormattingEnabled = true;
-            this.cbx_ordem.Location = new System.Drawing.Point(738, 20);
+            this.cbx_ordem.Location = new System.Drawing.Point(369, 10);
+            this.cbx_ordem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbx_ordem.Name = "cbx_ordem";
-            this.cbx_ordem.Size = new System.Drawing.Size(444, 33);
+            this.cbx_ordem.Size = new System.Drawing.Size(224, 21);
             this.cbx_ordem.TabIndex = 22;
             // 
             // groupBox2
@@ -139,11 +138,9 @@
             this.groupBox2.Controls.Add(this.rbt_corte);
             this.groupBox2.Controls.Add(this.rbt_rebobinadeira);
             this.groupBox2.Controls.Add(this.rbt_extrusora);
-            this.groupBox2.Location = new System.Drawing.Point(38, 144);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox2.Location = new System.Drawing.Point(19, 75);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(974, 137);
+            this.groupBox2.Size = new System.Drawing.Size(487, 71);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Processo";
@@ -151,10 +148,9 @@
             // rbt_expedicao
             // 
             this.rbt_expedicao.AutoSize = true;
-            this.rbt_expedicao.Location = new System.Drawing.Point(648, 56);
-            this.rbt_expedicao.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_expedicao.Location = new System.Drawing.Point(324, 29);
             this.rbt_expedicao.Name = "rbt_expedicao";
-            this.rbt_expedicao.Size = new System.Drawing.Size(144, 29);
+            this.rbt_expedicao.Size = new System.Drawing.Size(75, 17);
             this.rbt_expedicao.TabIndex = 3;
             this.rbt_expedicao.TabStop = true;
             this.rbt_expedicao.Text = "Expedição";
@@ -163,10 +159,9 @@
             // rbt_corte
             // 
             this.rbt_corte.AutoSize = true;
-            this.rbt_corte.Location = new System.Drawing.Point(466, 56);
-            this.rbt_corte.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_corte.Location = new System.Drawing.Point(233, 29);
             this.rbt_corte.Name = "rbt_corte";
-            this.rbt_corte.Size = new System.Drawing.Size(95, 29);
+            this.rbt_corte.Size = new System.Drawing.Size(50, 17);
             this.rbt_corte.TabIndex = 2;
             this.rbt_corte.TabStop = true;
             this.rbt_corte.Text = "Corte";
@@ -175,10 +170,9 @@
             // rbt_rebobinadeira
             // 
             this.rbt_rebobinadeira.AutoSize = true;
-            this.rbt_rebobinadeira.Location = new System.Drawing.Point(236, 56);
-            this.rbt_rebobinadeira.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_rebobinadeira.Location = new System.Drawing.Point(118, 29);
             this.rbt_rebobinadeira.Name = "rbt_rebobinadeira";
-            this.rbt_rebobinadeira.Size = new System.Drawing.Size(183, 29);
+            this.rbt_rebobinadeira.Size = new System.Drawing.Size(94, 17);
             this.rbt_rebobinadeira.TabIndex = 1;
             this.rbt_rebobinadeira.TabStop = true;
             this.rbt_rebobinadeira.Text = "Rebobinadeira";
@@ -187,10 +181,9 @@
             // rbt_extrusora
             // 
             this.rbt_extrusora.AutoSize = true;
-            this.rbt_extrusora.Location = new System.Drawing.Point(30, 56);
-            this.rbt_extrusora.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_extrusora.Location = new System.Drawing.Point(15, 29);
             this.rbt_extrusora.Name = "rbt_extrusora";
-            this.rbt_extrusora.Size = new System.Drawing.Size(135, 29);
+            this.rbt_extrusora.Size = new System.Drawing.Size(69, 17);
             this.rbt_extrusora.TabIndex = 0;
             this.rbt_extrusora.TabStop = true;
             this.rbt_extrusora.Text = "Extrusora";
@@ -199,10 +192,9 @@
             // btn_cadastrar
             // 
             this.btn_cadastrar.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.Location = new System.Drawing.Point(800, 712);
-            this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_cadastrar.Location = new System.Drawing.Point(400, 370);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(386, 138);
+            this.btn_cadastrar.Size = new System.Drawing.Size(193, 72);
             this.btn_cadastrar.TabIndex = 20;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = true;
@@ -211,10 +203,9 @@
             // btn_termino
             // 
             this.btn_termino.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_termino.Location = new System.Drawing.Point(402, 712);
-            this.btn_termino.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_termino.Location = new System.Drawing.Point(201, 370);
             this.btn_termino.Name = "btn_termino";
-            this.btn_termino.Size = new System.Drawing.Size(386, 138);
+            this.btn_termino.Size = new System.Drawing.Size(193, 72);
             this.btn_termino.TabIndex = 19;
             this.btn_termino.Text = "Término";
             this.btn_termino.UseVisualStyleBackColor = true;
@@ -223,10 +214,9 @@
             // btn_inicio
             // 
             this.btn_inicio.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inicio.Location = new System.Drawing.Point(6, 712);
-            this.btn_inicio.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_inicio.Location = new System.Drawing.Point(3, 370);
             this.btn_inicio.Name = "btn_inicio";
-            this.btn_inicio.Size = new System.Drawing.Size(386, 138);
+            this.btn_inicio.Size = new System.Drawing.Size(193, 72);
             this.btn_inicio.TabIndex = 18;
             this.btn_inicio.Text = "Início";
             this.btn_inicio.UseVisualStyleBackColor = true;
@@ -235,91 +225,81 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 669);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(24, 348);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 17;
             this.label6.Text = "Operador";
             // 
             // cbx_operador
             // 
             this.cbx_operador.FormattingEnabled = true;
-            this.cbx_operador.Location = new System.Drawing.Point(156, 660);
-            this.cbx_operador.Margin = new System.Windows.Forms.Padding(6);
+            this.cbx_operador.Location = new System.Drawing.Point(78, 343);
             this.cbx_operador.Name = "cbx_operador";
-            this.cbx_operador.Size = new System.Drawing.Size(232, 33);
+            this.cbx_operador.Size = new System.Drawing.Size(118, 21);
             this.cbx_operador.TabIndex = 16;
             // 
             // txt_peso
             // 
-            this.txt_peso.Location = new System.Drawing.Point(156, 610);
-            this.txt_peso.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_peso.Location = new System.Drawing.Point(78, 317);
             this.txt_peso.Name = "txt_peso";
-            this.txt_peso.Size = new System.Drawing.Size(232, 31);
+            this.txt_peso.Size = new System.Drawing.Size(118, 20);
             this.txt_peso.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 619);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(31, 322);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 25);
+            this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Peso";
             // 
             // txt_densidade2
             // 
-            this.txt_densidade2.Location = new System.Drawing.Point(738, 617);
-            this.txt_densidade2.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_densidade2.Location = new System.Drawing.Point(369, 321);
             this.txt_densidade2.Name = "txt_densidade2";
-            this.txt_densidade2.Size = new System.Drawing.Size(102, 31);
+            this.txt_densidade2.Size = new System.Drawing.Size(53, 20);
             this.txt_densidade2.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(688, 623);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(344, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 25);
+            this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "X";
             // 
             // txt_densidade1
             // 
-            this.txt_densidade1.Location = new System.Drawing.Point(564, 617);
-            this.txt_densidade1.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_densidade1.Location = new System.Drawing.Point(282, 321);
             this.txt_densidade1.Name = "txt_densidade1";
-            this.txt_densidade1.Size = new System.Drawing.Size(102, 31);
+            this.txt_densidade1.Size = new System.Drawing.Size(53, 20);
             this.txt_densidade1.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(584, 587);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(292, 305);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 25);
+            this.label3.Size = new System.Drawing.Size(116, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Variação da densidade";
             // 
             // txt_produto
             // 
-            this.txt_produto.Location = new System.Drawing.Point(156, 560);
-            this.txt_produto.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_produto.Location = new System.Drawing.Point(78, 291);
             this.txt_produto.Name = "txt_produto";
-            this.txt_produto.Size = new System.Drawing.Size(232, 31);
+            this.txt_produto.Size = new System.Drawing.Size(118, 20);
             this.txt_produto.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 567);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(31, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Produto";
             // 
@@ -332,11 +312,9 @@
             this.groupBox1.Controls.Add(this.rbt_extrusora3);
             this.groupBox1.Controls.Add(this.rbt_extrusora2);
             this.groupBox1.Controls.Add(this.rbt_extrusora1);
-            this.groupBox1.Location = new System.Drawing.Point(38, 298);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox1.Location = new System.Drawing.Point(19, 155);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(976, 242);
+            this.groupBox1.Size = new System.Drawing.Size(488, 126);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Máquina";
@@ -344,10 +322,9 @@
             // rbt_corte2
             // 
             this.rbt_corte2.AutoSize = true;
-            this.rbt_corte2.Location = new System.Drawing.Point(648, 102);
-            this.rbt_corte2.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_corte2.Location = new System.Drawing.Point(324, 53);
             this.rbt_corte2.Name = "rbt_corte2";
-            this.rbt_corte2.Size = new System.Drawing.Size(113, 29);
+            this.rbt_corte2.Size = new System.Drawing.Size(59, 17);
             this.rbt_corte2.TabIndex = 6;
             this.rbt_corte2.TabStop = true;
             this.rbt_corte2.Text = "Corte 2";
@@ -356,10 +333,9 @@
             // rbt_corte1
             // 
             this.rbt_corte1.AutoSize = true;
-            this.rbt_corte1.Location = new System.Drawing.Point(648, 38);
-            this.rbt_corte1.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_corte1.Location = new System.Drawing.Point(324, 20);
             this.rbt_corte1.Name = "rbt_corte1";
-            this.rbt_corte1.Size = new System.Drawing.Size(113, 29);
+            this.rbt_corte1.Size = new System.Drawing.Size(59, 17);
             this.rbt_corte1.TabIndex = 5;
             this.rbt_corte1.TabStop = true;
             this.rbt_corte1.Text = "Corte 1";
@@ -368,10 +344,9 @@
             // rbt_rebobinadeira2
             // 
             this.rbt_rebobinadeira2.AutoSize = true;
-            this.rbt_rebobinadeira2.Location = new System.Drawing.Point(346, 102);
-            this.rbt_rebobinadeira2.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_rebobinadeira2.Location = new System.Drawing.Point(173, 53);
             this.rbt_rebobinadeira2.Name = "rbt_rebobinadeira2";
-            this.rbt_rebobinadeira2.Size = new System.Drawing.Size(201, 29);
+            this.rbt_rebobinadeira2.Size = new System.Drawing.Size(103, 17);
             this.rbt_rebobinadeira2.TabIndex = 4;
             this.rbt_rebobinadeira2.TabStop = true;
             this.rbt_rebobinadeira2.Text = "Rebobinadeira 2";
@@ -380,10 +355,9 @@
             // rbt_rebobinadeira1
             // 
             this.rbt_rebobinadeira1.AutoSize = true;
-            this.rbt_rebobinadeira1.Location = new System.Drawing.Point(346, 38);
-            this.rbt_rebobinadeira1.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_rebobinadeira1.Location = new System.Drawing.Point(173, 20);
             this.rbt_rebobinadeira1.Name = "rbt_rebobinadeira1";
-            this.rbt_rebobinadeira1.Size = new System.Drawing.Size(201, 29);
+            this.rbt_rebobinadeira1.Size = new System.Drawing.Size(103, 17);
             this.rbt_rebobinadeira1.TabIndex = 3;
             this.rbt_rebobinadeira1.TabStop = true;
             this.rbt_rebobinadeira1.Text = "Rebobinadeira 1";
@@ -392,10 +366,9 @@
             // rbt_extrusora3
             // 
             this.rbt_extrusora3.AutoSize = true;
-            this.rbt_extrusora3.Location = new System.Drawing.Point(50, 165);
-            this.rbt_extrusora3.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_extrusora3.Location = new System.Drawing.Point(25, 86);
             this.rbt_extrusora3.Name = "rbt_extrusora3";
-            this.rbt_extrusora3.Size = new System.Drawing.Size(153, 29);
+            this.rbt_extrusora3.Size = new System.Drawing.Size(78, 17);
             this.rbt_extrusora3.TabIndex = 2;
             this.rbt_extrusora3.TabStop = true;
             this.rbt_extrusora3.Text = "Extrusora 3";
@@ -404,10 +377,9 @@
             // rbt_extrusora2
             // 
             this.rbt_extrusora2.AutoSize = true;
-            this.rbt_extrusora2.Location = new System.Drawing.Point(50, 102);
-            this.rbt_extrusora2.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_extrusora2.Location = new System.Drawing.Point(25, 53);
             this.rbt_extrusora2.Name = "rbt_extrusora2";
-            this.rbt_extrusora2.Size = new System.Drawing.Size(153, 29);
+            this.rbt_extrusora2.Size = new System.Drawing.Size(78, 17);
             this.rbt_extrusora2.TabIndex = 1;
             this.rbt_extrusora2.TabStop = true;
             this.rbt_extrusora2.Text = "Extrusora 2";
@@ -416,10 +388,9 @@
             // rbt_extrusora1
             // 
             this.rbt_extrusora1.AutoSize = true;
-            this.rbt_extrusora1.Location = new System.Drawing.Point(50, 38);
-            this.rbt_extrusora1.Margin = new System.Windows.Forms.Padding(6);
+            this.rbt_extrusora1.Location = new System.Drawing.Point(25, 20);
             this.rbt_extrusora1.Name = "rbt_extrusora1";
-            this.rbt_extrusora1.Size = new System.Drawing.Size(153, 29);
+            this.rbt_extrusora1.Size = new System.Drawing.Size(78, 17);
             this.rbt_extrusora1.TabIndex = 0;
             this.rbt_extrusora1.TabStop = true;
             this.rbt_extrusora1.Text = "Extrusora 1";
@@ -427,115 +398,72 @@
             // 
             // txt_termino
             // 
-            this.txt_termino.Location = new System.Drawing.Point(738, 73);
-            this.txt_termino.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_termino.Location = new System.Drawing.Point(369, 38);
             this.txt_termino.Name = "txt_termino";
-            this.txt_termino.Size = new System.Drawing.Size(444, 31);
+            this.txt_termino.Size = new System.Drawing.Size(224, 20);
             this.txt_termino.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(636, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(318, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Termino";
             // 
             // txt_inicio
             // 
-            this.txt_inicio.Location = new System.Drawing.Point(156, 73);
-            this.txt_inicio.Margin = new System.Windows.Forms.Padding(6);
+            this.txt_inicio.Location = new System.Drawing.Point(78, 38);
             this.txt_inicio.Name = "txt_inicio";
-            this.txt_inicio.Size = new System.Drawing.Size(396, 31);
+            this.txt_inicio.Size = new System.Drawing.Size(200, 20);
             this.txt_inicio.TabIndex = 3;
             this.txt_inicio.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbl_inicio
             // 
             this.lbl_inicio.AutoSize = true;
-            this.lbl_inicio.Location = new System.Drawing.Point(62, 81);
-            this.lbl_inicio.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbl_inicio.Location = new System.Drawing.Point(31, 42);
             this.lbl_inicio.Name = "lbl_inicio";
-            this.lbl_inicio.Size = new System.Drawing.Size(62, 25);
+            this.lbl_inicio.Size = new System.Drawing.Size(34, 13);
             this.lbl_inicio.TabIndex = 2;
             this.lbl_inicio.Text = "Início";
             this.lbl_inicio.Click += new System.EventHandler(this.lbl_inicio_Click);
             // 
             // dtp_apontamento
             // 
-            this.dtp_apontamento.Location = new System.Drawing.Point(156, 23);
-            this.dtp_apontamento.Margin = new System.Windows.Forms.Padding(6);
+            this.dtp_apontamento.Location = new System.Drawing.Point(78, 12);
             this.dtp_apontamento.Name = "dtp_apontamento";
-            this.dtp_apontamento.Size = new System.Drawing.Size(396, 31);
+            this.dtp_apontamento.Size = new System.Drawing.Size(200, 20);
             this.dtp_apontamento.TabIndex = 1;
             // 
             // lbl_data
             // 
             this.lbl_data.AutoSize = true;
-            this.lbl_data.Location = new System.Drawing.Point(66, 31);
-            this.lbl_data.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbl_data.Location = new System.Drawing.Point(33, 16);
             this.lbl_data.Name = "lbl_data";
-            this.lbl_data.Size = new System.Drawing.Size(57, 25);
+            this.lbl_data.Size = new System.Drawing.Size(30, 13);
             this.lbl_data.TabIndex = 0;
             this.lbl_data.Text = "Data";
-            // 
-            // btn_rebobinadeira
-            // 
-            this.btn_rebobinadeira.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rebobinadeira.Location = new System.Drawing.Point(4, 612);
-            this.btn_rebobinadeira.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_rebobinadeira.Name = "btn_rebobinadeira";
-            this.btn_rebobinadeira.Size = new System.Drawing.Size(324, 133);
-            this.btn_rebobinadeira.TabIndex = 6;
-            this.btn_rebobinadeira.Text = "Rebobinadeira";
-            this.btn_rebobinadeira.UseVisualStyleBackColor = true;
-            this.btn_rebobinadeira.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btn_corte
-            // 
-            this.btn_corte.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_corte.Location = new System.Drawing.Point(4, 746);
-            this.btn_corte.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_corte.Name = "btn_corte";
-            this.btn_corte.Size = new System.Drawing.Size(324, 133);
-            this.btn_corte.TabIndex = 7;
-            this.btn_corte.Text = "Corte";
-            this.btn_corte.UseVisualStyleBackColor = true;
-            this.btn_corte.Click += new System.EventHandler(this.btn_corte_Click);
-            // 
-            // btn_expedicao
-            // 
-            this.btn_expedicao.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_expedicao.Location = new System.Drawing.Point(4, 881);
-            this.btn_expedicao.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_expedicao.Name = "btn_expedicao";
-            this.btn_expedicao.Size = new System.Drawing.Size(324, 133);
-            this.btn_expedicao.TabIndex = 8;
-            this.btn_expedicao.Text = "Expedição";
-            this.btn_expedicao.UseVisualStyleBackColor = true;
-            this.btn_expedicao.Click += new System.EventHandler(this.btn_expedicao_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox1.Image = global::Leoplastic.Properties.Resources.Leoplastic_Logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 105);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(4, 210);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
+            this.button2.Location = new System.Drawing.Point(2, 109);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(324, 133);
+            this.button2.Size = new System.Drawing.Size(162, 69);
             this.button2.TabIndex = 0;
             this.button2.Text = "Inserir Apontamento";
             this.button2.UseVisualStyleBackColor = true;
@@ -547,29 +475,34 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1653, 206);
+            this.panel1.Size = new System.Drawing.Size(826, 107);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.btn_expedicao);
+            this.panel2.Controls.Add(this.btn_corte);
+            this.panel2.Controls.Add(this.btn_rebobinadeira);
+            this.panel2.Controls.Add(this.btn_extrusora);
+            this.panel2.Controls.Add(this.btn_listagem);
             this.panel2.Controls.Add(this.btn_export_Excel);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btn_gantt);
-            this.panel2.Controls.Add(this.btn_rebobinadeira);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(462, 1227);
+            this.panel2.Size = new System.Drawing.Size(231, 638);
             this.panel2.TabIndex = 11;
             // 
             // btn_export_Excel
             // 
             this.btn_export_Excel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_export_Excel.BackgroundImage")));
             this.btn_export_Excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_export_Excel.Location = new System.Drawing.Point(332, 343);
+            this.btn_export_Excel.Location = new System.Drawing.Point(166, 178);
+            this.btn_export_Excel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_export_Excel.Name = "btn_export_Excel";
-            this.btn_export_Excel.Size = new System.Drawing.Size(75, 75);
+            this.btn_export_Excel.Size = new System.Drawing.Size(38, 39);
             this.btn_export_Excel.TabIndex = 12;
             this.btn_export_Excel.UseVisualStyleBackColor = true;
             this.btn_export_Excel.Visible = false;
@@ -578,10 +511,9 @@
             // btn_gantt
             // 
             this.btn_gantt.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_gantt.Location = new System.Drawing.Point(4, 1015);
-            this.btn_gantt.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_gantt.Location = new System.Drawing.Point(2, 523);
             this.btn_gantt.Name = "btn_gantt";
-            this.btn_gantt.Size = new System.Drawing.Size(324, 133);
+            this.btn_gantt.Size = new System.Drawing.Size(162, 69);
             this.btn_gantt.TabIndex = 8;
             this.btn_gantt.Text = "Gráficos";
             this.btn_gantt.UseVisualStyleBackColor = true;
@@ -589,42 +521,73 @@
             // 
             // btn_listagem
             // 
+            this.btn_listagem.BackColor = System.Drawing.SystemColors.Control;
             this.btn_listagem.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_listagem.Location = new System.Drawing.Point(4, 343);
-            this.btn_listagem.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_listagem.Location = new System.Drawing.Point(2, 178);
             this.btn_listagem.Name = "btn_listagem";
-            this.btn_listagem.Size = new System.Drawing.Size(324, 133);
-            this.btn_listagem.TabIndex = 4;
+            this.btn_listagem.Size = new System.Drawing.Size(162, 69);
+            this.btn_listagem.TabIndex = 13;
             this.btn_listagem.Text = "Listagem Geral";
             this.btn_listagem.UseVisualStyleBackColor = true;
             this.btn_listagem.Click += new System.EventHandler(this.btn_listagem_Click);
             // 
             // btn_extrusora
             // 
+            this.btn_extrusora.BackColor = System.Drawing.SystemColors.Control;
             this.btn_extrusora.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_extrusora.Location = new System.Drawing.Point(4, 478);
-            this.btn_extrusora.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_extrusora.Location = new System.Drawing.Point(2, 247);
             this.btn_extrusora.Name = "btn_extrusora";
-            this.btn_extrusora.Size = new System.Drawing.Size(324, 133);
-            this.btn_extrusora.TabIndex = 5;
+            this.btn_extrusora.Size = new System.Drawing.Size(162, 69);
+            this.btn_extrusora.TabIndex = 14;
             this.btn_extrusora.Text = "Extrusora";
             this.btn_extrusora.UseVisualStyleBackColor = true;
             this.btn_extrusora.Click += new System.EventHandler(this.btn_extrusora_Click);
             // 
+            // btn_rebobinadeira
+            // 
+            this.btn_rebobinadeira.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_rebobinadeira.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rebobinadeira.Location = new System.Drawing.Point(2, 316);
+            this.btn_rebobinadeira.Name = "btn_rebobinadeira";
+            this.btn_rebobinadeira.Size = new System.Drawing.Size(162, 69);
+            this.btn_rebobinadeira.TabIndex = 15;
+            this.btn_rebobinadeira.Text = "Rebobinadeira";
+            this.btn_rebobinadeira.UseVisualStyleBackColor = true;
+            this.btn_rebobinadeira.Click += new System.EventHandler(this.btn_rebobinadeira_Click);
+            // 
+            // btn_corte
+            // 
+            this.btn_corte.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_corte.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_corte.Location = new System.Drawing.Point(2, 385);
+            this.btn_corte.Name = "btn_corte";
+            this.btn_corte.Size = new System.Drawing.Size(162, 69);
+            this.btn_corte.TabIndex = 16;
+            this.btn_corte.Text = "Corte";
+            this.btn_corte.UseVisualStyleBackColor = true;
+            this.btn_corte.Click += new System.EventHandler(this.btn_corte_Click);
+            // 
+            // btn_expedicao
+            // 
+            this.btn_expedicao.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_expedicao.Font = new System.Drawing.Font("Cambria Math", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_expedicao.Location = new System.Drawing.Point(2, 454);
+            this.btn_expedicao.Name = "btn_expedicao";
+            this.btn_expedicao.Size = new System.Drawing.Size(162, 69);
+            this.btn_expedicao.TabIndex = 17;
+            this.btn_expedicao.Text = "Expedição";
+            this.btn_expedicao.UseVisualStyleBackColor = true;
+            this.btn_expedicao.Click += new System.EventHandler(this.btn_expedicao_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2444, 1583);
+            this.ClientSize = new System.Drawing.Size(962, 614);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_expedicao);
-            this.Controls.Add(this.btn_corte);
-            this.Controls.Add(this.btn_extrusora);
-            this.Controls.Add(this.btn_listagem);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "PCP V1.000";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -675,19 +638,19 @@
         private System.Windows.Forms.RadioButton rbt_expedicao;
         private System.Windows.Forms.RadioButton rbt_corte;
         private System.Windows.Forms.RadioButton rbt_rebobinadeira;
-        private System.Windows.Forms.Button btn_rebobinadeira;
-        private System.Windows.Forms.Button btn_corte;
-        private System.Windows.Forms.Button btn_expedicao;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_listagem;
-        private System.Windows.Forms.Button btn_extrusora;
         private System.Windows.Forms.Button btn_gantt;
         private System.Windows.Forms.Button btn_export_Excel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbx_ordem;
+        private System.Windows.Forms.Button btn_listagem;
+        private System.Windows.Forms.Button btn_expedicao;
+        private System.Windows.Forms.Button btn_corte;
+        private System.Windows.Forms.Button btn_rebobinadeira;
+        private System.Windows.Forms.Button btn_extrusora;
     }
 }
 

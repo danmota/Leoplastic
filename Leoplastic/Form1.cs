@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
+
 // Reference for Database http://www.c-sharpcorner.com/article/read-microsoft-access-database-in-C-Sharp/
 
 namespace Leoplastic
@@ -63,13 +65,13 @@ namespace Leoplastic
         private void btn_inicio_Click(object sender, EventArgs e)
         {
             DateTime thisDay = DateTime.Now;
-            txt_inicio.Text = thisDay.ToString();
+            txt_inicio.Text = String.Format("{0:G}", thisDay);
         }
 
         private void btn_termino_Click(object sender, EventArgs e)
         {
             DateTime thisDay = DateTime.Now;
-            txt_termino.Text = thisDay.ToString();
+            txt_termino.Text = String.Format("{0:G}", thisDay);
 
         }
 
@@ -284,40 +286,7 @@ namespace Leoplastic
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int ix = this.Controls.Count - 1; ix >= 0; ix--)
-            {
-                if (this.Controls[ix] is DataGridView) this.Controls[ix].Dispose();
-            }
-            panel3.Hide();
-            DataGridView dgv = new DataGridView();
-
-            int x_loc = panel2.Width;
-            int y_loc = panel1.Height;
-
-            dgv.Location = new System.Drawing.Point(x_loc, y_loc);
-            dgv.Name = "DataGridView1";
-            //dgv.Size = new System.Drawing.Size(this.Width - 2 * x_loc, this.Height - 2 * y_loc);
-            dgv.Size = new System.Drawing.Size(1366, 856);
-            dgv.ForeColor = System.Drawing.Color.Black;
-            Controls.Add(dgv);
-
-            dgv.AutoResizeColumns();
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-            string sql = "SELECT * FROM producao WHERE processo='Rebobinadeira' ";
-            using (OleDbConnection conn = new OleDbConnection(connection))
-            {
-                // Create a command and set its connection  
-                OleDbCommand command = new OleDbCommand(sql, conn);
-                conn.Open();
-
-                DataSet ds = new DataSet();
-                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
-                {
-                    adapter.Fill(ds);
-                    dgv.DataSource = ds.Tables[0];
-                }
-            }
+            
         }
 
         private void btn_corte_Click(object sender, EventArgs e)
@@ -414,14 +383,25 @@ namespace Leoplastic
         private void btn_gantt_Click(object sender, EventArgs e)
         {
             btn_export_Excel.Visible = false;
-            
+
+
+            int x_start = 50;
+            int y_start = 50;
+            int x_finish = 1800;
+            int y_finish = 800;
 
 
             Form_Gantt_Chart gc = new Form_Gantt_Chart();
             gc.Show();
 
+
+
             Graphics g = gc.CreateGraphics();
 
+            // Create axis
+            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+            g.DrawLine(pen, x_start, y_finish, x_finish, y_finish);
+            g.DrawLine(pen, x_start, y_finish, x_start, y_start);
 
 
 
@@ -525,6 +505,44 @@ namespace Leoplastic
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_rebobinadeira_Click(object sender, EventArgs e)
+        {
+            for (int ix = this.Controls.Count - 1; ix >= 0; ix--)
+            {
+                if (this.Controls[ix] is DataGridView) this.Controls[ix].Dispose();
+            }
+            panel3.Hide();
+            DataGridView dgv = new DataGridView();
+
+            int x_loc = panel2.Width;
+            int y_loc = panel1.Height;
+
+            dgv.Location = new System.Drawing.Point(x_loc, y_loc);
+            dgv.Name = "DataGridView1";
+            //dgv.Size = new System.Drawing.Size(this.Width - 2 * x_loc, this.Height - 2 * y_loc);
+            dgv.Size = new System.Drawing.Size(1366, 856);
+            dgv.ForeColor = System.Drawing.Color.Black;
+            Controls.Add(dgv);
+
+            dgv.AutoResizeColumns();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            string sql = "SELECT * FROM producao WHERE processo='Rebobinadeira' ";
+            using (OleDbConnection conn = new OleDbConnection(connection))
+            {
+                // Create a command and set its connection  
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                conn.Open();
+
+                DataSet ds = new DataSet();
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn))
+                {
+                    adapter.Fill(ds);
+                    dgv.DataSource = ds.Tables[0];
+                }
+            }
         }
     }
 }
